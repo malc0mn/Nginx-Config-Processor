@@ -15,6 +15,15 @@ class TextTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \RomanPitak\Nginx\Config\Exception
+     */    
+    public function testEolErr()
+    {
+        $text = new Text('This is a line for testing...');
+        $text->eol(30);
+    }
+
+    /**
+     * @expectedException \RomanPitak\Nginx\Config\Exception
      */
     public function testGetCharPosition()
     {
