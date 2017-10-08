@@ -54,7 +54,7 @@ class Text
             throw new Exception('Position is not int. ' . gettype($position));
         }
 
-        if ($this->eof()) {
+        if ($this->eof($position)) {
             throw new Exception('Index out of range. Position: ' . $position . '.');
         }
 
